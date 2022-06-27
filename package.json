@@ -1,0 +1,20 @@
+{
+  "name": "proy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build-cliend",
+    "start": "env-cmd -f server.env  npm run start-server",
+    "build-client": "npm run build --prefix=client",
+    "start-server": "npm start --prefix=server",
+    "dev-server": "env-cmd -f server.env npm run dev --prefix=server",
+    "dev-client": "env-cmd -f client.env npm start --prefix=client"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "env-cmd": "^10.1.0"
+  }
+}
