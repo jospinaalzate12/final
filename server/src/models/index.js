@@ -9,7 +9,7 @@ switch (connection) {
     case MONGO:
         userModel = require("./mongo/user"); break;
     default:
-        throw `Must be specified DB_CONNECTION and only can be ${MYSQL} or ${MONGO}`;
+        throw `Must be specified DB_URI and only can be ${SQL} or ${MONGO}`;
 }
 
 module.exports = {

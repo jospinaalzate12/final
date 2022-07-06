@@ -11,9 +11,11 @@ const handleLogin = (req, res) => {
         })
 
     if (email != 'test@test.com')
-        return res.json({
-            error: "user not registered"
-        })
+       console.log(error)
+    return res.json({
+            error: "user not registered",
+           
+        }) 
 
     if (password != 'test')
         return res.json({

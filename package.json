@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run install-all && npm run build-client",
-    "start": "npm run start-server",
+    "start": " env-cmd -f server.env  npm run start-server",
     "build-client": "npm run build --prefix=client",
     "start-server": "npm start --prefix=server",
     "dev-server": "env-cmd -f server.env npm run dev --prefix=server",
@@ -13,12 +13,12 @@
     "install-all": "npm run install-client && npm run install-server",
     "install-client": "cd client && npm install",
     "install-server": "cd server && npm install"
-
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "concurrently": "^7.2.2",
     "env-cmd": "^10.1.0"
   }
 }
